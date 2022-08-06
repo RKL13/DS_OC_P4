@@ -1,7 +1,10 @@
-# Predict the CO2 emissions and the total energy consumption of Seattle's non residential building
+# Predict the CO2 emissions of Seattle's buildings
 
-### Mission 
+### Overview : Supervised learning to predict the CO2 emissions of Seattle non-residential buildings.  
 
-We were asked to forecast the total energy consumption and CO2 emissions of Seattle's non-residential buildings using supervised models.
+Typical cleanings (imputations, drops, outliers mitigation) are realized on the dataset, and residential buildings are removed. Feature engineering uses common sense, statistics, encodings, standardizations, and dimensionality reduction (PCA) techniques.
 
-This exciting project allowed us to dive deeper into Encoding techniques, Pipeline constructions, Metric selection, Cross-validation, among others, and the fine-tuning of several models (Linear Models, Support Vector Machines, Nearest Neighbors, Decisional Trees, and Ensemble Methods).
+Features are selected statistically (multicollinearity is mitigated with the variance inflation factor, contingency tests, and ANOVA tests). The dataset is prone to data leakage. Some features are removed accordingly.
+R2 and RMSE metrics are used to evaluate the performance of the models. 
+
+Are implemented, trained (with cross-validation), and optimized (grid search): Linear regression models, a Support Vector Machines model, a K Nearest Neighbors model, a Random Forest model, an Additive Boosting model, and an XGBoost model. The XGBoost model is the model selected.
